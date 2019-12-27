@@ -19,4 +19,9 @@ Route::get('/', function () {
 
 Route::get('/category', 'CategoryController@Category');
 
-Route::get('sub-category', 'SubcategoryController@SubCategory');
+Route::get('/sub-category', 'SubcategoryController@SubCategory');
+Route::get('/add-question', 'QuestionController@addQuestions');
+
+Route::get('/add-quiz', 'QuizController@addQuiz');
+
+
