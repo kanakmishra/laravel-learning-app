@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/add-question', 'QuestionController@addQuestions');
+
+Route::get('/add-quiz', 'QuizController@addQuiz');
+
+
