@@ -11,6 +11,12 @@
 |
 */
 
+use App\Http\Controllers\CategoryController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/category', 'CategoryController@Category');
+
+Route::get('sub-category', 'SubcategoryController@SubCategory');
