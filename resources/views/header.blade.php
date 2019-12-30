@@ -68,7 +68,7 @@
 <body>
 
     <div class="header">
-        <a href="#default" class="logo">Learning App</a>
+        <a href="#default" class="logo">Learning Application</a>
         <div class="header-right">
             <a href="#">Home</a>
             <a href="/category">Add Category</a>
