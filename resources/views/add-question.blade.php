@@ -9,8 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script>
     </head>
     <body>
+        @include('header')
         <form method="post" data-parsley-validate="">
             <div class="container">
+            <h1 class="text-center">Question</h1>
             <div class="form-group">
                 <label>Question Name:</label>
                 <input type="text" class="form-control" required=""  value="" data-parsley-minlength="3" data-parsley-maxlength="20">
