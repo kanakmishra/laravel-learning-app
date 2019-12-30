@@ -23,6 +23,7 @@
 </head>
 
 <body>
+@include('header')
     <div class="maindiv">
         <!--HTML Form -->
         <div class="form_div">
