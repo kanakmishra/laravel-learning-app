@@ -1,48 +1,34 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Category Form</title>
-    <link href="css/insert.css" rel="stylesheet">
-    <link rel="stylesheet" href="parsley.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="parsley.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('form').parsley();
-        });
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Category</title>
     <style>
-        .error {
+        .parsley-errors-list {
             color: red;
         }
     </style>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script>
 </head>
 
 <body>
-@include('header')
-    <div class="maindiv">
-        <!--HTML Form -->
-        <div class="form_div">
-            <div class="container">
-                <form action="" method="post" name="category" class="form-horizontal" role="form" data-parsley-validate>
-                    <h2>Category</h2>
-                    <div class="form-group">
-                        <label for="sub_category" class="col-sm-3 control-label">Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" id="category" name="category" required data-parsley="" placeholder="Category Name" class="form-control" autofocus>
-                        </div>
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                </form>
+    @include('header')
+    <form method="post" data-parsley-validate="">
+        <div class="container">
+            <h1 class="text-center">Category</h1>
+            <div class="form-group">
+                <label>Category Name:</label>
+                <input type="text" class="form-control" required="" value="" data-parsley-minlength="3" data-parsley-maxlength="20">
+            </div>
+            <div class="form-group">
+                <div class="col-4">
+                    <button type="submit" id="formSubmit" class="btn btn-primary btn-block" name="AddCategory">Add</button>
+                </div>
             </div>
         </div>
-    </div>
-
+    </form>
 </body>
-
-
-</html>
+<html>
