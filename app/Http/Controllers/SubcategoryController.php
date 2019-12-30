@@ -13,6 +13,6 @@ class SubcategoryController extends Controller
      */
     public function SubCategory()
     {
-        return view('subCategory');
+        return view('sub-category');
     }
 }
