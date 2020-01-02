@@ -17,7 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    return "Cleared!";
+});
+
 Route::get('/category', 'CategoryController@Category');
+// Route::get('/category', 'CategoryController@store');
 Route::get('/sub-category', 'SubcategoryController@SubCategory');
 Route::get('/add-question', 'QuestionController@addQuestions');
 Route::get('/add-quiz', 'QuizController@addQuiz');
